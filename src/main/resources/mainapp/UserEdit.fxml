@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="Requests.UserEdit"
+          hgap="10" vgap="10" style="-fx-background-color: #f4f4f4;">
+
+   <!-- Заголовок окна -->
+   <Label text="Редактирование пользователя" GridPane.rowIndex="0" GridPane.columnSpan="2"
+          style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+
+   <!-- Поиск пользователя -->
+   <Label text="ID пользователя:" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-text-fill: #333;" />
+   <TextField fx:id="textfieldFind" promptText="Введите ID пользователя" GridPane.rowIndex="1" GridPane.columnIndex="1" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+   <Button fx:id="buttonFind" text="Найти" onAction="#FindUser" GridPane.rowIndex="1" GridPane.columnIndex="2"
+           style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10px; -fx-background-radius: 10px;" />
+
+   <!-- Сообщение об ошибке -->
+   <Label fx:id="labelMessage" text="Данные не введены или пользователь не найден" visible="false"
+          GridPane.rowIndex="2" GridPane.columnSpan="3" style="-fx-text-fill: red; -fx-font-size: 14px;" />
+
+   <!-- Данные пользователя -->
+   <Label text="Логин:" GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-text-fill: #333;" />
+   <TextField fx:id="textfieldLogin" promptText="Введите логин" GridPane.rowIndex="3" GridPane.columnIndex="1" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+
+   <Label text="Пароль:" GridPane.rowIndex="4" GridPane.columnIndex="0" style="-fx-text-fill: #333;" />
+   <TextField fx:id="textfieldPassword" promptText="Введите пароль" GridPane.rowIndex="4" GridPane.columnIndex="1" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+
+   <Label text="Имя:" GridPane.rowIndex="5" GridPane.columnIndex="0" style="-fx-text-fill: #333;" />
+   <TextField fx:id="textfieldName" promptText="Введите имя" GridPane.rowIndex="5" GridPane.columnIndex="1" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+
+   <Label text="Пол:" GridPane.rowIndex="6" GridPane.columnIndex="0" style="-fx-text-fill: #333;" />
+   <HBox spacing="10" GridPane.rowIndex="6" GridPane.columnIndex="1">
+      <RadioButton fx:id="cbMale" text="Мужской" toggleGroup="$Sex1" style="-fx-text-fill: #333;" />
+      <RadioButton fx:id="cbFemale" text="Женский" toggleGroup="$Sex1" style="-fx-text-fill: #333;" />
+   </HBox>
+
+   <Label text="Электронная почта:" GridPane.rowIndex="7" GridPane.columnIndex="0" style="-fx-text-fill: #333;" />
+   <TextField fx:id="textfieldEmail" promptText="Введите email" GridPane.rowIndex="7" GridPane.columnIndex="1" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+
+   <Label text="Телефон:" GridPane.rowIndex="8" GridPane.columnIndex="0" style="-fx-text-fill: #333;" />
+   <TextField fx:id="textfieldPhone" promptText="Введите телефон" GridPane.rowIndex="8" GridPane.columnIndex="1" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+
+   <!-- Адрес -->
+   <Label text="Страна:" GridPane.rowIndex="9" GridPane.columnIndex="0" style="-fx-text-fill: #333;" />
+   <TextField fx:id="textfieldCountry" promptText="Введите страну" GridPane.rowIndex="9" GridPane.columnIndex="1" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+
+   <Label text="Город:" GridPane.rowIndex="10" GridPane.columnIndex="0" style="-fx-text-fill: #333;" />
+   <TextField fx:id="textfieldCity" promptText="Введите город" GridPane.rowIndex="10" GridPane.columnIndex="1" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+
+   <Label text="Улица:" GridPane.rowIndex="11" GridPane.columnIndex="0" style="-fx-text-fill: #333;" />
+   <TextField fx:id="textfieldStreet" promptText="Введите улицу" GridPane.rowIndex="11" GridPane.columnIndex="1" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+
+   <Label text="Номер дома:" GridPane.rowIndex="12" GridPane.columnIndex="0" style="-fx-text-fill: #333;" />
+   <TextField fx:id="textfieldHouseNumber" promptText="Введите номер дома" GridPane.rowIndex="12" GridPane.columnIndex="1" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+
+   <Label text="Индекс:" GridPane.rowIndex="13" GridPane.columnIndex="0" style="-fx-text-fill: #333;" />
+   <TextField fx:id="textfieldPostIndex" promptText="Введите почтовый индекс" GridPane.rowIndex="13" GridPane.columnIndex="1" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+
+   <!-- Кнопки -->
+   <Button fx:id="buttonSignUp" text="Сохранить" onAction="#Edit" GridPane.rowIndex="14" GridPane.columnIndex="1"
+           style="-fx-background-color: #7a4caf; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10px; -fx-background-radius: 10px;" />
+   <Button fx:id="buttonBack" text="Назад" onAction="#Back_Pressed" GridPane.rowIndex="14" GridPane.columnIndex="2"
+           style="-fx-background-color: #222dff; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10px; -fx-background-radius: 10px;" />
+
+   <!-- Сообщение об успешном редактировании -->
+   <Label fx:id="labelMessageTrue" text="Данные успешно изменены" visible="false"
+          GridPane.rowIndex="15" GridPane.columnSpan="3" style="-fx-text-fill: green; -fx-font-size: 14px;" />
+</GridPane>

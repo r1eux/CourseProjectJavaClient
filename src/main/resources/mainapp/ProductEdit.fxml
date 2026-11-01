@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns:fx="http://javafx.com/javafx"
+          fx:controller="Requests.ProductEdit"
+          hgap="10" vgap="10" style="-fx-background-color: #f4f4f4;">
+
+    <!-- Заголовок окна -->
+    <Label text="Редактирование товара" GridPane.rowIndex="0" GridPane.columnSpan="3"
+           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+
+    <!-- Поиск товара -->
+    <Label text="ID товара:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+    <TextField fx:id="textfieldProductId" promptText="Введите ID товара" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+    <Button fx:id="buttonFind" text="Найти" onAction="#FindProduct" GridPane.rowIndex="1" GridPane.columnIndex="2"
+            style="-fx-background-color: linear-gradient(#6422ff, #3b17b5); -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 20px; -fx-padding: 10px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 8, 0.5, 0, 2);" />
+
+    <!-- Сообщение об ошибке -->
+    <Label fx:id="labelMessage" text="Товар не найден или данные не введены" visible="false"
+           GridPane.rowIndex="2" GridPane.columnSpan="3" style="-fx-text-fill: red;" />
+
+    <!-- Данные товара -->
+    <Label text="Название товара:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+    <TextField fx:id="textfieldProductName" promptText="Введите название товара" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+    <Label text="Цена товара:" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+    <TextField fx:id="textfieldPrice" promptText="Введите цену товара" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+
+    <Label text="URL изображения:" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+    <TextField fx:id="textfieldProductImageUrl" promptText="Введите URL изображения" GridPane.rowIndex="5" GridPane.columnIndex="1" />
+
+    <Label text="Цвет товара:" GridPane.rowIndex="6" GridPane.columnIndex="0" />
+    <TextField fx:id="textfieldColor" promptText="Введите цвет товара" GridPane.rowIndex="6" GridPane.columnIndex="1" />
+
+    <Label text="Производитель:" GridPane.rowIndex="7" GridPane.columnIndex="0" />
+    <TextField fx:id="textfieldProducer" promptText="Введите производителя" GridPane.rowIndex="7" GridPane.columnIndex="1" />
+
+    <Label text="Страна производителя:" GridPane.rowIndex="8" GridPane.columnIndex="0" />
+    <TextField fx:id="textfieldProducerCountry" promptText="Введите страну производителя" GridPane.rowIndex="8" GridPane.columnIndex="1" />
+
+    <Label text="Категория товара:" GridPane.rowIndex="9" GridPane.columnIndex="0" />
+    <TextField fx:id="textfieldProductCategory" promptText="Введите категорию" GridPane.rowIndex="9" GridPane.columnIndex="1" />
+
+    <Label text="Количество:" GridPane.rowIndex="10" GridPane.columnIndex="0" />
+    <TextField fx:id="textfieldAmount" promptText="Введите количество" GridPane.rowIndex="10" GridPane.columnIndex="1" />
+
+    <Label text="Гарантия:" GridPane.rowIndex="11" GridPane.columnIndex="0" />
+    <TextField fx:id="textfieldWarranty" promptText="Введите гарантийный срок" GridPane.rowIndex="11" GridPane.columnIndex="1" />
+
+    <!-- Кнопки -->
+    <Button fx:id="buttonEdit" text="Сохранить" onAction="#Edit" GridPane.rowIndex="12" GridPane.columnIndex="1"
+            style="-fx-background-color: linear-gradient(#9b75ca, #6a41a6); -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 20px; -fx-padding: 10px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 8, 0.5, 0, 2);" />
+    <Button fx:id="buttonBack" text="Назад" onAction="#Back_Pressed" GridPane.rowIndex="12" GridPane.columnIndex="2"
+            style="-fx-background-color: linear-gradient(#7dc1f8, #2196F3); -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 20px; -fx-padding: 10px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 8, 0.5, 0, 2);" />
+
+    <!-- Сообщение об успешном редактировании -->
+    <Label fx:id="labelMessageTrue" text="Данные успешно изменены" visible="false"
+           GridPane.rowIndex="13" GridPane.columnSpan="3" style="-fx-text-fill: green;" />
+</GridPane>

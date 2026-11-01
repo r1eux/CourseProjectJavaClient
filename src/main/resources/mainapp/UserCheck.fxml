@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="Requests.UserCheck">
+    <children>
+        <!-- Контейнер для отображения пользователей -->
+        <TilePane fx:id="userTilePane" layoutX="20.0" layoutY="20.0" prefWidth="760.0" prefHeight="400.0"
+                  hgap="10.0" vgap="10.0" style="-fx-background-color: #f4f4f4; -fx-padding: 10;">
+        </TilePane>
+
+        <!-- Кнопки управления -->
+        <Button fx:id="logoutButton" text="Назад" layoutX="20.0" layoutY="440.0" prefWidth="80.0"
+                onAction="#Back_Pressed" />
+    </children>
+</AnchorPane>

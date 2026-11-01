@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="Requests.ReviewBarChart">
+    <children>
+        <BarChart fx:id="chart" layoutX="50" layoutY="50" prefWidth="600" prefHeight="400">
+            <xAxis>
+                <CategoryAxis fx:id="categoryAxis"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="numberAxis"/>
+            </yAxis>
+        </BarChart>
+        <Button fx:id="buttonBack" text="Назад" layoutX="50" layoutY="470" onAction="#Back_Pressed"/>
+    </children>
+</AnchorPane>

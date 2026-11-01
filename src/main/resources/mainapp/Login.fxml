@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="304.0" prefWidth="314.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Requests.Login">
+    <children>
+        <!-- Заголовок "Вход" -->
+        <Label layoutX="118.0" layoutY="29.0" text="Вход">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+
+        <!-- Лейблы -->
+        <Label layoutX="83.0" layoutY="92.0" style="-fx-font-size: 14px; -fx-text-fill: #000000;" text="Логин:" />
+        <Label layoutX="83.0" layoutY="152.0" style="-fx-font-size: 14px; -fx-text-fill: #000000;" text="Пароль:" />
+
+        <!-- Поля ввода -->
+        <TextField fx:id="textfieldLogin" layoutX="83.0" layoutY="109.0" style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5px; -fx-padding: 5px;" />
+        <PasswordField fx:id="passwordfieldPassword" layoutX="83.0" layoutY="171.0" style="-fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-radius: 5px; -fx-padding: 5px;" />
+
+        <!-- Кнопки -->
+        <Button fx:id="buttonRegister" layoutX="53.0" layoutY="235.0" mnemonicParsing="false" onAction="#Register_Pressed" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: linear-gradient(#6422ff, #3b17b5); -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 20px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 8, 0.5, 0, 2);" text="Регистрация" />
+        <Button fx:id="buttonLogin" layoutX="188.0" layoutY="235.0" mnemonicParsing="false" onAction="#Login_Pressed" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: linear-gradient(#2196F3, #4a5cd3); -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 20px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 8, 0.5, 0, 2);" text="Вход" />
+
+        <!-- Сообщение об ошибке -->
+        <Label fx:id="labelMessage" layoutX="76.0" layoutY="273.0" text="Неверный логин или пароль" textFill="RED" visible="false" />
+
+    </children>
+</AnchorPane>

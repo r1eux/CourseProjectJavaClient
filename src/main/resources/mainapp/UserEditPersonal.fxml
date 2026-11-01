@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="500.0" prefWidth="815.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Requests.UserEditPersonal">
+    <children>
+        <!-- Логин и пароль -->
+        <VBox layoutX="50.0" layoutY="20.0" spacing="10.0">
+            <Label style="-fx-text-fill: #333;" text="Логин:" />
+            <TextField fx:id="textfieldLogin" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+            <Label style="-fx-text-fill: #333;" text="Пароль:" />
+            <TextField fx:id="textfieldPassword" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+        </VBox>
+
+        <!-- Личные данные -->
+        <VBox layoutX="50.0" layoutY="150.0" spacing="10.0">
+            <Label style="-fx-text-fill: #333;" text="Имя:" />
+            <TextField fx:id="textfieldName" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+            <Label style="-fx-text-fill: #333;" text="Электронная почта:" />
+            <TextField fx:id="textfieldEmail" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+            <Label style="-fx-text-fill: #333;" text="Номер телефона:" />
+            <TextField fx:id="textfieldPhone" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+            <Label style="-fx-text-fill: #333;" text="Пол:" />
+            <VBox spacing="5.0">
+                <RadioButton fx:id="cbMale" mnemonicParsing="false" style="-fx-text-fill: #333;" text="Мужской">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="Sex1" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="cbFemale" mnemonicParsing="false" style="-fx-text-fill: #333;" text="Женский" toggleGroup="$Sex1" />
+            </VBox>
+        </VBox>
+
+        <!-- Адрес -->
+        <VBox layoutX="400.0" layoutY="20.0" spacing="10.0">
+            <Label style="-fx-text-fill: #333;" text="Адрес:" />
+            <VBox spacing="5.0">
+                <Label style="-fx-text-fill: #333;" text="Страна:" />
+                <TextField fx:id="textfieldCountry" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+                <Label style="-fx-text-fill: #333;" text="Город:" />
+                <TextField fx:id="textfieldCity" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+                <Label style="-fx-text-fill: #333;" text="Улица:" />
+                <TextField fx:id="textfieldStreet" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+                <Label style="-fx-text-fill: #333;" text="Дом:" />
+                <TextField fx:id="textfieldHouseNumber" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+                <Label style="-fx-text-fill: #333;" text="Почтовый индекс:" />
+                <TextField fx:id="textfieldPostIndex" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-border-color: #ddd; -fx-padding: 8px;" />
+            </VBox>
+        </VBox>
+
+        <!-- Кнопки -->
+        <VBox layoutX="50.0" layoutY="400.0" spacing="10.0" />
+
+        <!-- Сообщения -->
+        <VBox layoutX="400.0" layoutY="373.0" spacing="5.0">
+            <Label fx:id="labelMessageTrue" alignment="CENTER" style="-fx-font-size: 14px;" text="Данные успешно изменены" textFill="#268000" visible="false" />
+            <Button fx:id="buttonSignUp" mnemonicParsing="false" onAction="#Edit" prefHeight="39.0" prefWidth="199.0" style="-fx-background-color: #934caf; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10px; -fx-background-radius: 10px;" text="Изменить данные" />
+            <Button fx:id="buttonBack" mnemonicParsing="false" onAction="#Back_Pressed" prefWidth="200.0" style="-fx-background-color: #2d22ff; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10px; -fx-background-radius: 10px;" text="Назад" />
+            <Label fx:id="labelMessage" alignment="CENTER" style="-fx-font-size: 14px;" text="Ошибка" textFill="RED" visible="false" />
+        </VBox>
+
+        <!-- Разделители -->
+        <Separator layoutX="380.0" layoutY="10.0" orientation="VERTICAL" prefHeight="350.0" style="-fx-border-color: #ddd;" />
+    </children>
+</AnchorPane>

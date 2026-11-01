@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.scene.control.Button?>
+        <?import javafx.scene.control.MenuButton?>
+        <?import javafx.scene.control.MenuItem?>
+        <?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="430.0" prefWidth="282.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Requests.MenuAdmin">
+<children>
+    <!-- Кнопка "Назад" -->
+    <Button fx:id="buttonBack" layoutX="76.0" layoutY="359.0" mnemonicParsing="false" onAction="#backPressed" style="                     -fx-background-color: linear-gradient(#6422ff, #3b17b5);                     -fx-text-fill: white;                     -fx-font-size: 14px;                     -fx-font-weight: bold;                     -fx-padding: 10px;                     -fx-background-radius: 20px;                     -fx-pref-width: 130px;                     -fx-pref-height: 40px;                     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 8, 0.5, 0, 2);                 " text="Назад" />
+
+    <!-- Меню "Управление товарами" -->
+    <MenuButton fx:id="productMenu" layoutX="30.0" layoutY="30.0" mnemonicParsing="false" style="                         -fx-font-size: 14px;                         -fx-background-color: linear-gradient(#9b75ca, #6a41a6);                         -fx-text-fill: white;                         -fx-font-weight: bold;                         -fx-padding: 8px 10px;                         -fx-background-radius: 15px;                         -fx-pref-width: 220px;                         -fx-pref-height: 40px;                         -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 2);                     " text="Товары">
+        <items>
+            <MenuItem fx:id="searchProduct" mnemonicParsing="false" onAction="#SearchProduct" style="-fx-text-fill: #000000;" text="Найти товар" />
+            <MenuItem fx:id="addProduct" mnemonicParsing="false" onAction="#AddProduct" style="-fx-text-fill: #000000;" text="Добавить товар" />
+            <MenuItem fx:id="deleteProduct" mnemonicParsing="false" onAction="#DeleteProduct" style="-fx-text-fill: #000000;" text="Удалить товар" />
+            <MenuItem fx:id="editProduct" mnemonicParsing="false" onAction="#EditProduct" style="-fx-text-fill: #000000;" text="Изменить товар" />
+            <MenuItem fx:id="viewProduct" mnemonicParsing="false" onAction="#ViewProduct" style="-fx-text-fill: #000000;" text="Просмотреть все товары" />
+        </items>
+    </MenuButton>
+
+    <!-- Меню "Управление пользователями" -->
+    <MenuButton fx:id="userMenu" layoutX="30.0" layoutY="100.0" mnemonicParsing="false" style="                         -fx-font-size: 14px;                         -fx-background-color: linear-gradient(#7dc1f8, #2196F3);                         -fx-text-fill: white;                         -fx-font-weight: bold;                         -fx-padding: 8px 10px;                         -fx-background-radius: 15px;                         -fx-pref-width: 220px;                         -fx-pref-height: 40px;                         -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 2);                     " text="Пользователи">
+        <items>
+            <MenuItem fx:id="addUser" mnemonicParsing="false" onAction="#AddUser" style="-fx-text-fill: #000000;" text="Добавление пользователя" />
+            <MenuItem fx:id="deleteUser" mnemonicParsing="false" onAction="#DeleteUser" style="-fx-text-fill: #000000;" text="Удалить пользователя" />
+            <MenuItem fx:id="editUser" mnemonicParsing="false" onAction="#EditUser" style="-fx-text-fill: #000000;" text="Изменить пользователя" />
+            <MenuItem fx:id="viewUser" mnemonicParsing="false" onAction="#ViewUser" style="-fx-text-fill: #000000;" text="Просмотреть пользователей" />
+            <MenuItem fx:id="searchUser" mnemonicParsing="false" onAction="#SearchUser" style="-fx-text-fill: #000000;" text="Найти пользователя" />
+        </items>
+    </MenuButton>
+
+    <!-- Меню "Управление заказами" -->
+    <MenuButton fx:id="orderMenu" layoutX="30.0" layoutY="165.0" mnemonicParsing="false" style="                         -fx-font-size: 14px;                         -fx-background-color: linear-gradient(#ce7cf8, #9c4ec1);                         -fx-text-fill: white;                         -fx-font-weight: bold;                         -fx-padding: 8px 10px;                         -fx-background-radius: 15px;                         -fx-pref-width: 220px;                         -fx-pref-height: 40px;                         -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 2);                     " text="Заказы">
+        <items>
+            <MenuItem fx:id="viewOrder" mnemonicParsing="false" onAction="#ViewOrder" style="-fx-text-fill: #000000;" text="Просмотр заказов и управление статусом" />
+        </items>
+    </MenuButton>
+
+    <!-- Меню "Статистика" -->
+    <MenuButton fx:id="statsMenu" layoutX="30.0" layoutY="235.0" mnemonicParsing="false" style="                         -fx-font-size: 14px;                         -fx-background-color: linear-gradient(#7d8aff, #4a5cd3);                         -fx-text-fill: white;                         -fx-font-weight: bold;                         -fx-padding: 8px 10px;                         -fx-background-radius: 15px;                         -fx-pref-width: 220px;                         -fx-pref-height: 40px;                         -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 2);                     " text="Статистика">
+        <items>
+            <MenuItem fx:id="ReviewBarChart" mnemonicParsing="false" onAction="#ManWomen" style="-fx-text-fill: #000000;" text="Статистика по полу" />
+            <MenuItem fx:id="CategoryDiagram" mnemonicParsing="false" onAction="#PieDiagram" style="-fx-text-fill: #000000;" text="Круговая диаграмма" />
+        </items>
+    </MenuButton>
+    <MenuButton fx:id="reviewMenu" layoutX="31.0" layoutY="301.0" mnemonicParsing="false" style="                         -fx-font-size: 14px;                         -fx-background-color: linear-gradient(#7d8aff, #4a5cd3);                         -fx-text-fill: white;                         -fx-font-weight: bold;                         -fx-padding: 8px 10px;                         -fx-background-radius: 15px;                         -fx-pref-width: 220px;                         -fx-pref-height: 40px;                         -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 2);                     " text="Отзывы">
+        <items>
+            <MenuItem fx:id="ReviewCheck" mnemonicParsing="false" onAction="#ReviewCheck" style="-fx-text-fill: #000000;" text="Вывод всех отзывов" />
+        </items>
+    </MenuButton>
+</children>
+</AnchorPane>

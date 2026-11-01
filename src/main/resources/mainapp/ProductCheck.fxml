@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.stage.Stage?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="Requests.ProductCheck">
+    <!-- Кнопка для выхода -->
+    <Button fx:id="logoutButton" text="Выход" layoutX="10" layoutY="10" onAction="#Back_Pressed"/>
+
+    <!-- TilePane для отображения товаров -->
+    <TilePane fx:id="productTilePane" layoutX="10" layoutY="50" hgap="10" vgap="10" prefColumns="3">
+        <!-- Здесь будут отображаться товары -->
+    </TilePane>
+
+
+</AnchorPane>

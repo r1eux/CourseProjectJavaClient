@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="331.0" prefWidth="612.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Requests.MenuUser">
+   <children>
+      <!-- Кнопка "Просмотреть список товаров" -->
+      <Button fx:id="buttonProductList" layoutX="42.0" layoutY="47.0" mnemonicParsing="false" onAction="#ViewAndAddToCart" prefHeight="42.0" prefWidth="210.0" style="-fx-background-color: linear-gradient(#9b75ca, #6a41a6); -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px; -fx-background-radius: 5px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 8, 0, 2, 2);" text="Ассортимент" />
+
+      <!-- Кнопка "Просмотреть корзину" -->
+      <Button fx:id="buttonCart" layoutX="41.0" layoutY="232.0" mnemonicParsing="false" onAction="#ViewCartAndOrder" prefHeight="42.0" prefWidth="210.0" style="-fx-background-color: linear-gradient(#7dc1f8, #2196F3); -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px; -fx-background-radius: 5px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 8, 0, 2, 2);" text="Корзина" />
+
+      <!-- Кнопка "Изменить данные учетной записи" -->
+      <Button fx:id="buttonEdit" layoutX="314.0" layoutY="46.0" mnemonicParsing="false" onAction="#EditUser" prefHeight="42.0" prefWidth="258.0" style="-fx-background-color: linear-gradient(#ce7cf8, #9c4ec1); -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px; -fx-background-radius: 5px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 8, 0, 2, 2);" text="Редактирование профиля" />
+
+      <!-- Кнопка "Просмотреть историю заказов" -->
+      <Button fx:id="buttonOrder" layoutX="314.0" layoutY="231.0" mnemonicParsing="false" onAction="#ViewOrder" prefHeight="42.0" prefWidth="258.0" style="-fx-background-color: linear-gradient(#7d8aff, #4a5cd3); -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px; -fx-background-radius: 5px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 8, 0, 2, 2);" text="История заказов" />
+
+      <!-- Кнопка "Назад" -->
+      <Button fx:id="buttonBack" layoutX="251.0" layoutY="149.0" mnemonicParsing="false" onAction="#backPressed" style="-fx-background-color: linear-gradient(#6422ff, #3b17b5); -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10px; -fx-background-radius: 5px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 8, 0, 2, 2);" text="Назад" />
+   </children>
+</AnchorPane>
